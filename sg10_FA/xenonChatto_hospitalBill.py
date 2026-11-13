@@ -79,7 +79,7 @@ class PhilHealth_Patient(Patient):
         return self.bill_amount - discount
 
 
-regular_patient = Patient("Percy Jackson", 15000, 0.0)
+regular_patient = Patient("Percy Jackson", 15000, 0)
 senior_patient = Senior_Patient("Annabeth Chase", 65, 20000, 0.2)
 philhealth_patient = PhilHealth_Patient("Grover Underwood", 25, 10000, 0.15)
 
