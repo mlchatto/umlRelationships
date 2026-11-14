@@ -1,3 +1,6 @@
+from unicodedata import name
+
+
 class Patient:
     def __init__(self, name: str, age: int, bill_amount: float, bill_discount: int):
         self.__name = name
@@ -64,7 +67,7 @@ class Patient:
 
 class Senior_Patient(Patient):
     def __init__(self, name: str, age: int, bill_amount: float):
-        super().__init__(name, age, bill_amount)
+        super().__init__(name, age, bill_amount, 0.20)
 
     def calculate_bill(self):
         discount = 0.2 * self.bill_amount
@@ -72,7 +75,7 @@ class Senior_Patient(Patient):
 
 class PhilHealth_Patient(Patient):
     def __init__(self, name: str, age: int, bill_amount: float):
-        super().__init__(name, age, bill_amount)
+        super().__init__(name, age, bill_amount, 0.15)
 
     def calculate_bill(self):
         discount = 0.15 * self.bill_amount
@@ -87,6 +90,6 @@ patients = [regular_patient, senior_patient, philhealth_patient]
 for patient in patients:
     print("Hospital Billing System")
     print("\n-----------------------------")
-    patient.name()
-    patient.age()
-    patient.bill_amount()
+    print(f"Name: {patient.name}")
+    print(f"Age: {patient.age}")
+    print(f"Bill Amount: {patient.bill_amount}")
