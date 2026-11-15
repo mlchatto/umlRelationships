@@ -87,6 +87,7 @@ senior_patient = Senior_Patient("Annabeth Chase", 65, 20000)
 philhealth_patient = PhilHealth_Patient("Grover Underwood", 25, 10000)
 
 patients = [regular_patient, senior_patient, philhealth_patient]
+
 for patient in patients:
     print("Hospital Billing System")
     print("\n-----------------------------")
