@@ -43,3 +43,16 @@ student2.study()
 
 print("\n|------------------------------------------------------|\n")
 
+class Teacher(Person):
+    def __init__(self, name: str, age: int):
+        super().__init__(name, age)
+
+    def teach(self):
+        print(f"{self.name} is teaching.")
+
+teacher1 = Teacher("Mona", 30)
+
+print(f"Name: {teacher1.name}")
+print(f"Age: {teacher1.get_age()}")
+
+teacher1.teach()
